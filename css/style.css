@@ -217,16 +217,50 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author:
    ========================================================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
+body{position: relative; font-size: 78%; background: blue }
+a, a:visited{ font-weight: bold; color: white}
+header{
+	background-image: -webkit-linear-gradient(#35373B , #1E2123);
+	background-image: -moz-linear-gradient(#35373B , #1E2123);
+	background-image: -o-linear-gradient(#35373B , #1E2123);
+	padding: .4em;
+	z-index: 1000;
+	position: absolute;
+	right: 0;
+	left: 0;
+	box-shadow: 0 1px 2px black;
+}
 
+sidebar{width: 18%; position: absolute; color: #f1f1f1; top: 40px; bottom: 0; background: #1d1f20}
+sidebar a{color: white;}
+sidebar .inner-padding{padding: 0 1em}
+sidebar .people a{display: block; padding: 1em; border-bottom: 1px solid #222}
+.content{position: absolute; bottom: 0; right: 0; top: 0;  left: 18%;  }
+.wrap{ 
+	background: url('../img/wood.jpg');
+	height: auto !important; /* ie6 ignores !important, so this will be overridden below */
+	min-height: 100%; /* ie6 ignores min-height completely */
+	height: 100%;
+	overflow: scroll;
+}
 
-
-
-
-
-
-
-
+.chat{ z-index: 100; position: absolute; left: 1em; top: 3em; bottom: 5em; right: 1em; overflow: scroll; background: white;  background: url('../img/bg-double-line.png') center;}
+.chat-box{background-color: #e4eaec; position: relative; margin: 1.4em; border-radius: 4px; padding: 1em; padding-left: 6em}
+.chat-box h5{margin-top: 0; font-size: 1em; margin-bottom: 1em}
+.chat-box h5 .date{float: right; font-size: 0.8em}
+.chat-box .avatar{position: absolute; left: 1em; top: 1em; border-radius: 4px}
+.chat-box p:last-child{margin-bottom: 0}
+.chat-input{background: url('../img/bg-purple.png'); border: 1px solid #000; box-shadow: 0 0 0 1px rgba(255,255,255,.1) inset,  0 0 10px 2px rgba(0,0,0,.65) inset ; overflow: hidden; bottom: 0; position: absolute; right: 0; left: 0}
+.chat-input textarea{height: auto; max-height: 1.2em; padding: .6em; border: 1px solid #333; box-shadow: 0 1px 2px rgba(0,0,0,.6) inset; border-radius: 4px; width: auto; max-width: 100%; display: block; margin: 1% 1.5%}
+.chat, .line-chat{ box-shadow: 0 1px 1px rgba(0,0,0,.5)}
+.line-chat{bottom: 4.8em; left: 1.2em; z-index: 50; right: 1.2em; background: white; position: absolute; height: 40px; }
+.line-chat.second{bottom: 4.5em; z-index: 40; left: 1.4em; right: 1.4em}
 
 
 
