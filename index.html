@@ -35,18 +35,21 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	<div class="wrap">
 		<header>
+			
+			<div class="dropdown dropdown-status">
+				<a href="#" class="selected available"><b></b>Available</a>
+				<a href="#" class="away"><b></b>Away</a>
+				<a href="#" class="busy"><b></b>Busy</a>
+				<a href="#" class="logout">Busy</a>
+			</div><!-- .dropdown dropdown-status -->
+			
 			<div class="dropdown dropdown-room">
-				<a href="#" class="current_room">Current Room</a>
+				<a href="#" class="selected">Current Room</a>
 				<a href="#">Room</a>
 				<a href="#">Room</a>
 				<a href="#">Room</a>
 			</div><!-- .dropdown-room -->
 		
-			<div class="dropdown dropdown-status">
-				<a href="#"><b></b>Available</a>
-				<a href="#"><b></b>Away</a>
-				<a href="#"><b></b>Busy</a>
-			</div><!-- .dropdown dropdown-status -->
 	  </header>
 
 		<sidebar>
@@ -56,13 +59,14 @@
 				<h4 class="inner-padding">ONLINE</h4>
 			
 				<div class="people">
-					<a href="#"><b></b>Ricardo Rauch</a>
-					<a href="#"><b></b>Ricardo Rauch</a>
-					<a href="#"><b></b>Ricardo Rauch</a>
-					<a href="#"><b></b>Ricardo Rauch</a>
-					<a href="#"><b></b>Ricardo Rauch</a>
-					<a href="#"><b></b>Ricardo Rauch</a>
-					<a href="#"><b></b>Ricardo Rauch</a>
+					<a href="#" class="available"><b></b>Ricardo Rauch</a>
+					<a href="#" class="available"><b></b>Ricardo Rauch</a>
+					<a href="#" class="available"><b></b>Ricardo Rauch</a>
+					<a href="#" class="available"><b></b>Ricardo Rauch</a>
+					<a href="#" class="away"><b></b>Ricardo Rauch</a>
+					<a href="#" class="away"><b></b>Ricardo Rauch</a>
+					<a href="#" class="busy"><b></b>Ricardo Rauch</a>
+					<a href="#" class="busy"><b></b>Ricardo Rauch</a>
 				</div><!-- .people -->
 			</div><!-- .online -->
 			
@@ -109,17 +113,11 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis libero nisl, id congue nibh. Suspendisse potenti.</p>
 				</div><!-- .chat-box -->
 			</div><!-- .chat -->
-			<div class="line-chat">
-				
-			</div>
-			
-			<div class="line-chat second">
-				
-			</div>
-		
+			<div class="line-chat"></div>
+			<div class="line-chat second"></div>
 		
 			<div class="chat-input">
-				<textarea name="Name" rows="8" cols="40"></textarea>
+				<input type="text" name="" class="text" value="" id="">
 			</div><!-- .chat-input -->
 	  </div>
 	</div><!-- .wrap -->
