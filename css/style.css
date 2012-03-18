@@ -250,26 +250,33 @@ a.busy b{background: -webkit-radial-gradient(50% top, circle,  #DCCACC, #8C4F55)
 a.away b{background: -webkit-radial-gradient(50% top, circle,  #DCDBCA, #908C51);}
 
 header{
-	background-image: -webkit-linear-gradient(#35373B , #1E2123);
-	background-image: -moz-linear-gradient(#35373B , #1E2123);
-	background-image: -o-linear-gradient(#35373B , #1E2123);
+	background-image: -webkit-gradient(linear, 0 0, 0 34, color-stop(0.058, #555), to(#242424));
+	background-image: -webkit-linear-gradient(#555 5.8%, #242424);
+	background-image: -moz-linear-gradient(#555 5.8%, #242424);
+	background-image: -o-linear-gradient(#555 5.8%, #242424);
 	padding: .9em;
 	z-index: 1000;
 	position: absolute;
 	right: 0;
 	left: 0;
-	box-shadow: 0 1px 2px black;
+	box-shadow: 0 1px 1px black, 0 1px 0 black inset;
+	border-bottom: 1px solid black;
 }
 
 header .dropdown{border: 1px solid #141617; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 1px 0 rgba(255,255,255,.1); border-radius: 4px}
 header .dropdown a{padding: 6px 10px; display: block; font-size: .8em; text-transform: uppercase; display: none;}
 header .dropdown a.selected{display: block;}
 
-header .dropdown-status{float: right; }
-header .dropdown-room{float: left;}
+header .dropdown.dropdown-status{float: right; }
+header .dropdown.dropdown-room{
+	background-image: -webkit-linear-gradient(#444 , #242424);
+	background-image: -moz-linear-gradient(#555 5.8%, #242424);
+	background-image: -o-linear-gradient(#555 5.8%, #242424);
+	float: left; 
+	width: 180px;
+}
 
-sidebar{width: 18%; position: absolute; color: #f1f1f1; top: 4em; bottom: 0; background: #1d1f20}
-
+sidebar{width: 200px; position: absolute; color: #f1f1f1; top: 4em; bottom: 0; border-right: 1px solid black; z-index: 400; background: #222}
 sidebar h3{
 	font-size: .9em;
 	text-transform: uppercase;
@@ -286,7 +293,7 @@ sidebar h4{text-transform: uppercase; color: #555; font-size: .9em}
 
 sidebar a{color: white;}
 sidebar h4, sidebar div.online .people a{padding: 0 1em}
-sidebar div.online .people a{display: block; padding: .8em 1em; font-size: .9em; border-bottom: 1px solid #222}
+sidebar div.online .people a{display: block; padding: .8em 1em; font-size: .9em; border-bottom: 1px solid rgba(255,255,255,.04)}
 sidebar div.online a:hover{
 	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
 	background-image: -moz-linear-gradient(#7e7e7e, #616161 8.6%, #3a3a3a);
@@ -295,7 +302,7 @@ sidebar div.online a:hover{
 }
 sidebar div.online{margin-bottom: 3em}
 
-.content{position: absolute; bottom: 0; right: 0; top: 0;  left: 18%;  }
+.content{position: absolute; bottom: 0; right: 0; top: 0;  left: 201px; z-index: 400  }
 
 
 .chat{ z-index: 100; position: absolute; top: 4em; left: 0; right: 0; bottom: 4em; overflow: scroll; background: white; }
@@ -305,7 +312,7 @@ sidebar div.online{margin-bottom: 3em}
 .chat .chat-box h5 .date{float: right; font-size: 0.8em; color: rgba(0,0,0,.6); font-weight: normal; font-style: italic;}
 .chat .chat-box .avatar{position: absolute; left: 2em; top: 1.4em; border-radius: 4px}
 .chat .chat-box p:last-child{margin-bottom: 0}
-.chat .chat-input{ overflow: hidden; z-index: 10000; bottom: 0; position: absolute; right: 0; left: 0;
+.chat-input{ overflow: hidden; z-index: 10000; bottom: 0; position: absolute; right: 0; left: 0;
 	border-top: 1px solid #ccc;
   background-image: -webkit-gradient(linear, 0 0, 0 45, color-stop(0.044, #fdfdfd), to(#dfe2e9));
   background-image: -webkit-linear-gradient(#eee 4.4%, #ccc);
