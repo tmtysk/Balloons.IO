@@ -222,6 +222,7 @@ html, body {
     padding: 0;
     height: 100%;
 	  -webkit-font-smoothing: antialiased;
+	overflow: hidden;
 }
 
 body{position: relative; font-size: 78%; }
@@ -241,10 +242,12 @@ input[type=password].text:focus, textarea:focus{
 	height: auto !important; /* ie6 ignores !important, so this will be overridden below */
 	min-height: 100%; /* ie6 ignores min-height completely */
 	height: 100%;
-	overflow: scroll;
+	overflow-y: scroll;
+	width: auto;
+	max-width: 100%;
 }
 
-a b{background: red; height: 8px;  width: 8px; border: 1px solid black; margin-bottom: -2px; margin-right: 6px; border-radius: 100px; display: inline-block;}
+a b{background: red; height: 8px;  width: 8px; border: 1px solid black; margin-bottom: -1px; margin-right: 6px; border-radius: 100px; display: inline-block;}
 a.available b{background: -webkit-radial-gradient(50% top, circle,  #B5D8A6, #58854B);}
 a.busy b{background: -webkit-radial-gradient(50% top, circle,  #DCCACC, #8C4F55);}
 a.away b{background: -webkit-radial-gradient(50% top, circle,  #DCDBCA, #908C51);}
@@ -278,12 +281,24 @@ header{
 	border-bottom: 1px solid black;
 }
 
-header .dropdown{border: 1px solid #141617; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 1px 0 rgba(255,255,255,.1); border-radius: 4px}
-header .dropdown a{padding: 6px 10px; display: block; font-size: .8em; text-transform: uppercase; display: none;}
-header .dropdown a.selected{display: block;}
+.dropdown{border: 1px solid #141617; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 1px 0 rgba(255,255,255,.1); border-radius: 4px}
+.dropdown a{padding: 6px 10px; display: block; font-size: .8em; text-transform: uppercase; display: none;}
+.dropdown a.selected{display: block;}
 
-header .dropdown.dropdown-status{float: right; }
-header .dropdown.dropdown-room{
+.dropdown {position: relative}
+.dropdown i{
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	width: 12px;
+	height: 12px;
+	background:  url('../img/icon-dropdown.png') right center no-repeat;
+	display: block;
+	z-index: 1000;
+}
+
+.dropdown.dropdown-status{float: right; }
+.dropdown.dropdown-room{
 	background-image: -webkit-linear-gradient(#444 , #242424);
 	background-image: -moz-linear-gradient(#555 5.8%, #242424);
 	background-image: -o-linear-gradient(#555 5.8%, #242424);
@@ -291,9 +306,9 @@ header .dropdown.dropdown-room{
 	width: 180px;
 }
 
-sidebar{width: 200px; position: absolute; color: #f1f1f1; top: 4em; bottom: 0; border-right: 1px solid black; z-index: 400; background: #222}
+sidebar{width: 200px; position: absolute; color: #f1f1f1; top: 4em; bottom: 0; font-size: .9em; border-right: 1px solid black; z-index: 400; background: #222}
 sidebar h3{
-	font-size: .9em;
+	font-size: 1em;
 	text-transform: uppercase;
 	padding: .6em 1em;
 	background-image: -webkit-gradient(linear, 0 0, 0 23, from(#7e7e7e), color-stop(0.086, #616161), to(#3a3a3a));
@@ -304,37 +319,53 @@ sidebar h3{
 	text-shadow: 0 1px 0 black;
 	margin-top: 0;
 }
-sidebar h4{text-transform: uppercase; color: #555; font-size: .9em}
+sidebar h4{text-transform: uppercase; color: #555; font-size: 1em; margin-top: 2em}
 
 sidebar a{color: white;}
 sidebar h4, sidebar div.online .people a{padding: 0 1em}
-sidebar div.online .people a{display: block; padding: .8em 1em; font-size: .9em; border-bottom: 1px solid rgba(255,255,255,.04)}
+sidebar div.online {height: 60%; margin-bottom: 3em}
+sidebar div.files {height: 18%;  margin-bottom: 3em}
+sidebar div.online .people, sidebar div.files .files-container{  overflow-y: scroll; height: 100%}
+sidebar div.online .people a{display: block; padding: .8em 1em;  border-bottom: 1px solid rgba(255,255,255,.04)}
 sidebar div.online a:hover{
 	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
 	background-image: -moz-linear-gradient(#7e7e7e, #616161 8.6%, #3a3a3a);
 	background-image: -o-linear-gradient(#7e7e7e, #616161 8.6%, #3a3a3a);
 	color: black;
+	box-shadow: none;
 }
-sidebar div.online{margin-bottom: 3em; height: 60%}
+sidebar div.online{margin-bottom: 3em; }
 
-.content{position: absolute; bottom: 0; right: 0; top: 0;  left: 201px; z-index: 400  }
+sidebar .files .files-container{padding: 1em}
+sidebar .files a {display: block; margin-bottom: 1.4em}
+sidebar .files a span{
+	background: white; margin-right: .8em; border-radius: 3px; float: left; margin-top: -4px; display: inline-block;
+	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
+	background-image: -moz-linear-gradient(#7e7e7e, #616161 8.6%, #3a3a3a);
+	background-image: -o-linear-gradient(#7e7e7e, #616161 8.6%, #3a3a3a);
+}
 
+sidebar .files  a i{ margin: 4px; display: block; width: 12px; height: 12px}
+sidebar .files  a.picture i{background: url('../img/icons.png') no-repeat 0 1px;}
+sidebar .files  a.file i{background: url('../img/icons.png') no-repeat 0 -59px;}
 
-.chat{ z-index: 100; position: absolute; top: 4em; left: 0; right: 0; bottom: 4em; overflow: scroll; background: white; }
-.chat .chat-box{text-shadow: 0 1px 0 white; position: relative; padding:  1.4em 2em; border-bottom: 1px solid #eee; padding-left: 7em}
-.chat .chat-box:nth-child(2n){background-color: #f1f1f1}
-.chat .chat-box h5{margin-top: 0; font-size: 1em; margin-bottom: 1em}
-.chat .chat-box h5 .date{float: right; font-size: 0.8em; color: rgba(0,0,0,.6); font-weight: normal; font-style: italic;}
-.chat .chat-box .avatar{position: absolute; left: 2em; top: 1.4em; border-radius: 4px}
-.chat .chat-box p:last-child{margin-bottom: 0}
-.chat-input{ overflow: hidden; z-index: 10000; bottom: 0; position: absolute; right: 0; left: 0;
+.content{position: absolute; bottom: 0; right: 0; top: 4.4em;  left: 201px;   }
+.content .chat{ z-index: 100; position: absolute; top: 0; left: 0; right: 0; bottom: 3em; overflow-y: scroll;  }
+.content .chat .chat-box{text-shadow: 0 1px 0 white; position: relative; padding:  1.4em 2em; display: block; border-bottom: 1px solid #eee; padding-left: 6.4em}
+.content .chat .chat-box:nth-child(2n){background-color: #f1f1f1}
+.content .chat .chat-box h5{margin-top: 0; font-size: 1em; margin-bottom: 1em}
+.content .chat .chat-box h5 .date{float: right; font-size: 0.8em; color: rgba(0,0,0,.6); font-weight: normal; font-style: italic;}
+.content .chat .chat-box .avatar{position: absolute; left: 1.4em; top: 1.4em; border-radius: 4px}
+.content .chat .chat-box p:last-child{margin-bottom: 0}
+.content .chat-input{ overflow: hidden; z-index: 10000; bottom: 0; position: absolute; right: 0; left: 0;
 	border-top: 1px solid #ccc;
   background-image: -webkit-gradient(linear, 0 0, 0 45, color-stop(0.044, #fdfdfd), to(#dfe2e9));
   background-image: -webkit-linear-gradient(#eee 4.4%, #ccc);
   background-image: -moz-linear-gradient(#fdfdfd 4.4%, #dfe2e9);
   background-image: -o-linear-gradient(#fdfdfd 4.4%, #dfe2e9);	
 }
-.chat-input input.text{height: auto; max-height: 1.2em; padding: .6em; border: 1px solid #333; box-shadow: 0 1px 2px rgba(0,0,0,.6) inset; border-radius: 4px; width: 95%; padding: 1%; display: block; margin: 1% 1.5%}
+.content .chat-input input.text{height: auto; max-height: 1.2em; padding: .6em; border: 1px solid #333; box-shadow: 0 1px 2px rgba(0,0,0,.6) inset; border-radius: 4px; width: 95%; padding: 1%; display: block; margin: 1% 1.5%}
+
 
 
 
