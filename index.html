@@ -39,19 +39,28 @@
 		<header>
 
 			<div class="dropdown dropdown-status">
+				<i></i> 
+				
 				<a href="#" class="selected available"><b></b>Available</a>
-				<a href="#" class="away"><b></b>Away</a>
-				<a href="#" class="busy"><b></b>Busy</a>
-				<a href="#" class="logout">Busy</a>
+				<div class="dropdown-options">
+					<div class="triangle"></div>
+					<a href="#" class="available"><b></b>Available</a>
+					<a href="#" class="away"><b></b>Away</a>
+					<a href="#" class="busy"><b></b>Busy</a>
+				</div>
 			</div><!-- .dropdown dropdown-status -->
 			
 			<div class="dropdown dropdown-room">
-				<i></i>
+				<i></i> 
 				
 				<a href="#" class="selected">Current Room</a>
-				<a href="#">Room</a>
-				<a href="#">Room</a>
-				<a href="#">Room</a>
+				<div class="dropdown-options">			
+					<div class="triangle"></div>
+						
+					<a href="#">Room</a>
+					<a href="#">Room</a>
+					<a href="#">Room</a>
+				</div>
 			</div><!-- .dropdown-room -->
 		
 	  </header>
@@ -87,11 +96,7 @@
 					<a href="#" class="file"><span><i></i></span>filename-example.dmg</a>
 				</div><!-- .files-container -->
 			</div><!-- .files -->
-		
-			<footer>
-			
-		  </footer>
-		
+				
 		</sidebar>
 	
 	  <div class="content" role="main">
@@ -109,6 +114,10 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis libero nisl, id congue nibh. Suspendisse potenti.</p>
 				</div><!-- .chat-box -->
 			
+				<div class="notice">
+					Ricardo Rauch has left the room
+				</div>
+				
 				<div class="chat-box">
 					<div class="avatar"><img src="http://placehold.it/45x45"></div>
 					<h5><span class="date">11:00 PM</span>Ricardo Rauch</h5>

@@ -279,11 +279,28 @@ header{
 	left: 0;
 	box-shadow: 0 1px 1px black, 0 1px 0 black inset;
 	border-bottom: 1px solid black;
+	font-size: .9em;
 }
 
-.dropdown{border: 1px solid #141617; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 1px 0 rgba(255,255,255,.1); border-radius: 4px}
-.dropdown a{padding: 6px 10px; display: block; font-size: .8em; text-transform: uppercase; display: none;}
-.dropdown a.selected{display: block;}
+.dropdown {position: relative}
+.dropdown .selected{border: 1px solid #141617; padding: 6px 10px; display: block; text-transform: uppercase; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 1px 0 rgba(255,255,255,.1); border-radius: 4px}
+.dropdown .dropdown-options{
+	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
+	background-image: -moz-linear-gradient(#f1f1f1,  #ccc);
+	background-image: -o-linear-gradient(#f1f1f1,  #ccc);
+	border-radius: 4px; position: absolute; display: block;
+	top: 36px;
+	box-shadow: 0 0px 2px black;
+}
+.dropdown.dropdown-room .dropdown-options{width: 180px; }
+.dropdown.dropdown-status .dropdown-options{width: 100px; }
+
+.dropdown .dropdown-options .triangle{background: #f1f1f1; z-index:; position: absolute; top: -5px; left: 48%; width: 10px; height: 10px; display: block;
+	-webkit-transform: rotate(-45deg); 
+	-moz-transform: rotate(-45deg);	
+}
+.dropdown .dropdown-options a{display: block;	color: #333; padding: 1em 1em; border-bottom: 1px solid #ccc; box-shadow: 0 1px 0 rgba(255,255,255,.4)}
+.dropdown .dropdown-options a:last-child{border-bottom: 0; box-shadow: none}
 
 .dropdown {position: relative}
 .dropdown i{
@@ -306,7 +323,7 @@ header{
 	width: 180px;
 }
 
-sidebar{width: 200px; position: absolute; color: #f1f1f1; top: 4em; bottom: 0; font-size: .9em; border-right: 1px solid black; z-index: 400; background: #222}
+sidebar{width: 200px; height: auto; max-height: 100%; position: absolute; color: #f1f1f1; top: 4em; bottom: 0; font-size: .9em; border-right: 1px solid black; z-index: 400; background: #222}
 sidebar h3{
 	font-size: 1em;
 	text-transform: uppercase;
@@ -323,8 +340,8 @@ sidebar h4{text-transform: uppercase; color: #555; font-size: 1em; margin-top: 2
 
 sidebar a{color: white;}
 sidebar h4, sidebar div.online .people a{padding: 0 1em}
-sidebar div.online {height: 60%; margin-bottom: 3em}
-sidebar div.files {height: 18%;  margin-bottom: 3em}
+sidebar div.online {height: 90%; }
+sidebar div.files {height: 18%;  display: none; }
 sidebar div.online .people, sidebar div.files .files-container{  overflow-y: scroll; height: 100%}
 sidebar div.online .people a{display: block; padding: .8em 1em;  border-bottom: 1px solid rgba(255,255,255,.04)}
 sidebar div.online a:hover{
@@ -351,7 +368,8 @@ sidebar .files  a.file i{background: url('../img/icons.png') no-repeat 0 -59px;}
 
 .content{position: absolute; bottom: 0; right: 0; top: 4.4em;  left: 201px;   }
 .content .chat{ z-index: 100; position: absolute; top: 0; left: 0; right: 0; bottom: 3em; overflow-y: scroll;  }
-.content .chat .chat-box{text-shadow: 0 1px 0 white; position: relative; padding:  1.4em 2em; display: block; border-bottom: 1px solid #eee; padding-left: 6.4em}
+.content .chat .notice{background: #fcfde6; font-size: .9em; font-style: italic; color: #666; padding: .8em 7em}
+.content .chat .chat-box{text-shadow: 0 1px 0 white; position: relative; padding:  1.4em 2em; display: block; border-bottom: 1px solid #eee;padding-left: 6.4em}
 .content .chat .chat-box:nth-child(2n){background-color: #f1f1f1}
 .content .chat .chat-box h5{margin-top: 0; font-size: 1em; margin-bottom: 1em}
 .content .chat .chat-box h5 .date{float: right; font-size: 0.8em; color: rgba(0,0,0,.6); font-weight: normal; font-style: italic;}
