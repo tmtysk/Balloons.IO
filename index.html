@@ -17,7 +17,9 @@
 
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-
+	
+	<link rel="stylesheet" href="js/libs/fancy-box/jquery.fancybox.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
   <link rel="stylesheet" href="css/style.css">
@@ -43,11 +45,15 @@
 				<a href="#" class="selected available "><b></b>Available</a>
 				<div class="dropdown-options">
 					<div class="triangle"></div>
-					<a href="#" class="option available current"><b></b>Available</a>
-					<a href="#" class="option away"><b></b>Away</a>
-					<a href="#" class="option busy"><b></b>Busy</a>
+					<div class="list">
+						<a href="#" class="option available current"><b></b>Available</a>
+						<a href="#" class="option away"><b></b>Away</a>
+						<a href="#" class="option busy"><b></b>Busy</a>
+					</div>
 				</div>
 			</div><!-- .dropdown dropdown-status -->
+			
+
 			
 			<div class="dropdown dropdown-room">
 				<i></i> 
@@ -56,13 +62,82 @@
 				<div class="dropdown-options">			
 					<div class="triangle"></div>
 					<a href="#" class="option create-room">Create a room</a>	
-					<input type="text" name="" value="" class="text" placeholder="Name of your room" id="" style="display: none">				
-					<a href="#" class="option current">Room</a>
-					<a href="#" class="option">Room</a>
-					<a href="#" class="option">Room</a>
+					<input type="text" name="" value="" class="text" placeholder="Name of your room" id="" style="display: none">			
+					<div class="list">
+						<a href="#" class="option current">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+						<a href="#" class="option">Room</a>
+					</div>
 				</div>
 			</div><!-- .dropdown-room -->
-		
+			
+			<a href="#invite" class="button-circle invite fancybox">
+				<strong><span><i></i></span></strong>
+			</a>
+			
+			<div id="invite" class="modal modal-invite" style="display: none">
+				<h2>Title</h2>
+				
+				<div class="modal-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+					
+					<div class="tweet-user">
+						<input type="text" name="" value="" id="" class="" />
+					</div>
+					
+					<div class="tweet-user">
+						<input type="text" name="" value="" id="" class="" />
+					</div>
+					
+					<div class="tweet-user">
+						<input type="text" name="" value="" id="" class="" />
+					</div>
+					
+					<div class="tweet-user">
+						<input type="text" name="" value="" id="" class="" />
+					</div>
+					
+					<div class="tweet-user">
+						<input type="text" name="" value="" id="" class="" />
+					</div>
+					
+					<div class="tweet-user">
+						<input type="text" name="" value="" id="" class="" />
+					</div>
+					
+				</div><!-- .modal-content -->
+				<div class="modal-footer">
+					<a href="#" class="button">Invite these people</a>
+				</div><!-- .modal-footers -->
+				
+			</div><!-- #invite -->
+			
+			<a href="#" class="button-circle lock ">
+				<strong><span><i></i></span></strong>
+			</a>
+			
 	  </header>
 
 		<sidebar>
@@ -83,7 +158,7 @@
 					<a href="#" class="busy"><b></b>Ricardo Rauch</a>
 					<a href="#" class="busy"><b></b>Ricardo Rauch</a>
 					<a href="#" class="busy"><b></b>Ricardo Rauch</a>
-					<a href="#" class="busy"><b></b>Ricardo Rauch</a>
+					<a href="#" class="busy"><b></b>Ricardo Ultimo</a>
 				</div><!-- .people -->
 			</div><!-- .online -->
 			
@@ -150,7 +225,9 @@
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-
+	
+	<script src="js/libs/fancy-box/jquery.fancybox.pack.js"></script>
+	
   <!-- scripts concatenated and minified via build script -->
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>

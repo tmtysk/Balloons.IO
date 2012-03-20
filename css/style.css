@@ -51,7 +51,6 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
    ========================================================================== */
 
 a { color: #00e; }
-a:visited { color: #551a8b; }
 a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 
@@ -226,8 +225,9 @@ html, body {
 }
 
 body{position: relative; font-size: 78%; }
-a, a:visited{ text-decoration: none; font-weight: bold; color: white}
+a{ text-decoration: none; font-weight: bold; color: white}
 
+input.text{border: 1px solid #ccc; border-radius: 4px; padding: .6em; border: 1px solid #666; box-shadow: 0 1px 2px rgba(0,0,0,.6) inset; width: 200px}
 input[type=text].text:focus,
 input[type=search].text:focus,
 input[type=password].text:focus, textarea:focus{
@@ -256,13 +256,13 @@ a.away b{background: -webkit-radial-gradient(50% top, circle,  #DCDBCA, #908C51)
 	width: 100%;
 	background: #f23c24;
 	background-image: -webkit-gradient(linear, 0 0, 458 0, from(#4d6fbc), color-stop(0.004, #4d6fbc), color-stop(0.004, #4f6ebc), color-stop(0.01, #4f6eba), color-stop(0.01, #516dba), color-stop(0.019, #536bb5), color-stop(0.028, #5769b4), color-stop(0.03, #576ab2), color-stop(0.045, #5c64ae), color-stop(0.045, #5f63ac), color-stop(0.056, #6261a7), color-stop(0.056, #6560a5), color-stop(0.063, #665ea4), color-stop(0.063, #685da2), color-stop(0.067, #695c9f), color-stop(0.074, #70599e), color-stop(0.078, #70589b), color-stop(0.085, #735696), color-stop(0.087, #765496), color-stop(0.111, #864888), color-stop(0.12, #8a4682), color-stop(0.133, #944079), color-stop(0.137, #964077), color-stop(0.146, #9d3a70), color-stop(0.148, #9e3a70), color-stop(0.159, #a63767), color-stop(0.165, #aa3565), color-stop(0.168, #ad3362), color-stop(0.172, #af3361), color-stop(0.183, #b62f59), color-stop(0.185, #b82d56), color-stop(0.218, #cb2843), color-stop(0.246, #db2536), color-stop(0.406, #f03026), color-stop(0.46, #f33824), color-stop(0.462, #f13924), color-stop(0.515, #f24124), color-stop(0.604, #f35322), color-stop(0.604, #f1541f), color-stop(0.615, #f25520), color-stop(0.615, #f2571e), color-stop(0.622, #f2571e), color-stop(0.622, #f1591f), color-stop(0.641, #f25b20), color-stop(0.641, #f15c1d), color-stop(0.655, #f35e1f), color-stop(0.655, #f15f1c), color-stop(0.7, #f36a18), color-stop(0.703, #f26c19), color-stop(0.762, #f27714), color-stop(0.762, #f27910), color-stop(0.772, #f37a12), color-stop(0.772, #f27b14), color-stop(0.79, #f27d10), color-stop(0.79, #f2800d), color-stop(0.803, #f3810f), color-stop(0.803, #f2830b), color-stop(0.814, #f3840d), color-stop(0.814, #f28506), color-stop(0.855, #f48b05), color-stop(0.855, #f28c04), color-stop(0.888, #f39200), color-stop(0.914, #f49700), color-stop(0.914, #f29800), color-stop(0.93, #f39900), color-stop(0.93, #f39b00), color-stop(0.951, #f39f00), color-stop(0.995, #f4a300), color-stop(0.995, #f2a400), to(#f2a400));
-	background-image: -webkit-linear-gradient(360deg, #4d6fbc, #4d6fbc 0.4%, #4f6ebc 0.4%, #4f6eba 1%, #516dba 1%, #536bb5 1.9%, #5769b4 2.8%, #576ab2 3%, #5c64ae 4.5%, #5f63ac 4.5%, #6261a7 5.6%, #6560a5 5.6%, #665ea4 6.3%, #685da2 6.3%, #695c9f 6.7%, #70599e 7.4%, #70589b 7.8%, #735696 8.5%, #765496 8.7%, #864888 11.1%, #8a4682 12%, #944079 13.3%, #964077 13.7%, #9d3a70 14.6%, #9e3a70 14.8%, #a63767 15.9%, #aa3565 16.5%, #ad3362 16.8%, #af3361 17.2%, #b62f59 18.3%, #b82d56 18.5%, #cb2843 21.8%, #db2536 24.6%, #f03026 40.6%, #f33824 46%, #f13924 46.2%, #f24124 51.5%, #f35322 60.4%, #f1541f 60.4%, #f25520 61.5%, #f2571e 61.5%, #f2571e 62.2%, #f1591f 62.2%, #f25b20 64.1%, #f15c1d 64.1%, #f35e1f 65.5%, #f15f1c 65.5%, #f36a18 70%, #f26c19 70.3%, #f27714 76.2%, #f27910 76.2%, #f37a12 77.2%, #f27b14 77.2%, #f27d10 79%, #f2800d 79%, #f3810f 80.3%, #f2830b 80.3%, #f3840d 81.4%, #f28506 81.4%, #f48b05 85.5%, #f28c04 85.5%, #f39200 88.8%, #f49700 91.4%, #f29800 91.4%, #f39900 93%, #f39b00 93%, #f39f00 95.1%, #f4a300 99.5%, #f2a400 99.5%, #f2a400);
+/*	background-image: -webkit-linear-gradient(360deg, #4d6fbc, #4d6fbc 0.4%, #4f6ebc 0.4%, #4f6eba 1%, #516dba 1%, #536bb5 1.9%, #5769b4 2.8%, #576ab2 3%, #5c64ae 4.5%, #5f63ac 4.5%, #6261a7 5.6%, #6560a5 5.6%, #665ea4 6.3%, #685da2 6.3%, #695c9f 6.7%, #70599e 7.4%, #70589b 7.8%, #735696 8.5%, #765496 8.7%, #864888 11.1%, #8a4682 12%, #944079 13.3%, #964077 13.7%, #9d3a70 14.6%, #9e3a70 14.8%, #a63767 15.9%, #aa3565 16.5%, #ad3362 16.8%, #af3361 17.2%, #b62f59 18.3%, #b82d56 18.5%, #cb2843 21.8%, #db2536 24.6%, #f03026 40.6%, #f33824 46%, #f13924 46.2%, #f24124 51.5%, #f35322 60.4%, #f1541f 60.4%, #f25520 61.5%, #f2571e 61.5%, #f2571e 62.2%, #f1591f 62.2%, #f25b20 64.1%, #f15c1d 64.1%, #f35e1f 65.5%, #f15f1c 65.5%, #f36a18 70%, #f26c19 70.3%, #f27714 76.2%, #f27910 76.2%, #f37a12 77.2%, #f27b14 77.2%, #f27d10 79%, #f2800d 79%, #f3810f 80.3%, #f2830b 80.3%, #f3840d 81.4%, #f28506 81.4%, #f48b05 85.5%, #f28c04 85.5%, #f39200 88.8%, #f49700 91.4%, #f29800 91.4%, #f39900 93%, #f39b00 93%, #f39f00 95.1%, #f4a300 99.5%, #f2a400 99.5%, #f2a400);*/
 /*	background-image: -webkit-linear-gradient(360deg,  #db2536 24.6%, #f03026 40.6%, #f33824 46%, #f13924 46.2%, #f24124 51.5%, #f35322 60.4%, #f1541f 60.4%, #f25520 61.5%, #f2571e 61.5%, #f2571e 62.2%, #f1591f 62.2%, #f25b20 64.1%, #f15c1d 64.1%, #f35e1f 65.5%, #f15f1c 65.5%, #f36a18 70%, #f26c19 70.3%, #f27714 76.2%, #f27910 76.2%, #f37a12 77.2%, #f27b14 77.2%, #f27d10 79%, #f2800d 79%, #f3810f 80.3%, #f2830b 80.3%, #f3840d 81.4%, #f28506 81.4%, #f48b05 85.5%, #f28c04 85.5%, #f39200 88.8%, #f49700 91.4%, #f29800 91.4%, #f39900 93%, #f39b00 93%, #f39f00 95.1%, #f4a300 99.5%, #f2a400 99.5%, #f2a400);*/
-/*	background-image: -webkit-linear-gradient(360deg, #4d6fbc, #e15389);*/
-
+	background-image: -webkit-linear-gradient(360deg, #4d6fbc, #e15389);
 	background-image: -moz-linear-gradient(360deg, #4d6fbc, #4d6fbc 0.4%, #4f6ebc 0.4%, #4f6eba 1%, #516dba 1%, #536bb5 1.9%, #5769b4 2.8%, #576ab2 3%, #5c64ae 4.5%, #5f63ac 4.5%, #6261a7 5.6%, #6560a5 5.6%, #665ea4 6.3%, #685da2 6.3%, #695c9f 6.7%, #70599e 7.4%, #70589b 7.8%, #735696 8.5%, #765496 8.7%, #864888 11.1%, #8a4682 12%, #944079 13.3%, #964077 13.7%, #9d3a70 14.6%, #9e3a70 14.8%, #a63767 15.9%, #aa3565 16.5%, #ad3362 16.8%, #af3361 17.2%, #b62f59 18.3%, #b82d56 18.5%, #cb2843 21.8%, #db2536 24.6%, #f03026 40.6%, #f33824 46%, #f13924 46.2%, #f24124 51.5%, #f35322 60.4%, #f1541f 60.4%, #f25520 61.5%, #f2571e 61.5%, #f2571e 62.2%, #f1591f 62.2%, #f25b20 64.1%, #f15c1d 64.1%, #f35e1f 65.5%, #f15f1c 65.5%, #f36a18 70%, #f26c19 70.3%, #f27714 76.2%, #f27910 76.2%, #f37a12 77.2%, #f27b14 77.2%, #f27d10 79%, #f2800d 79%, #f3810f 80.3%, #f2830b 80.3%, #f3840d 81.4%, #f28506 81.4%, #f48b05 85.5%, #f28c04 85.5%, #f39200 88.8%, #f49700 91.4%, #f29800 91.4%, #f39900 93%, #f39b00 93%, #f39f00 95.1%, #f4a300 99.5%, #f2a400 99.5%, #f2a400);
 	background-image: -o-linear-gradient(360deg, #4d6fbc, #4d6fbc 0.4%, #4f6ebc 0.4%, #4f6eba 1%, #516dba 1%, #536bb5 1.9%, #5769b4 2.8%, #576ab2 3%, #5c64ae 4.5%, #5f63ac 4.5%, #6261a7 5.6%, #6560a5 5.6%, #665ea4 6.3%, #685da2 6.3%, #695c9f 6.7%, #70599e 7.4%, #70589b 7.8%, #735696 8.5%, #765496 8.7%, #864888 11.1%, #8a4682 12%, #944079 13.3%, #964077 13.7%, #9d3a70 14.6%, #9e3a70 14.8%, #a63767 15.9%, #aa3565 16.5%, #ad3362 16.8%, #af3361 17.2%, #b62f59 18.3%, #b82d56 18.5%, #cb2843 21.8%, #db2536 24.6%, #f03026 40.6%, #f33824 46%, #f13924 46.2%, #f24124 51.5%, #f35322 60.4%, #f1541f 60.4%, #f25520 61.5%, #f2571e 61.5%, #f2571e 62.2%, #f1591f 62.2%, #f25b20 64.1%, #f15c1d 64.1%, #f35e1f 65.5%, #f15f1c 65.5%, #f36a18 70%, #f26c19 70.3%, #f27714 76.2%, #f27910 76.2%, #f37a12 77.2%, #f27b14 77.2%, #f27d10 79%, #f2800d 79%, #f3810f 80.3%, #f2830b 80.3%, #f3840d 81.4%, #f28506 81.4%, #f48b05 85.5%, #f28c04 85.5%, #f39200 88.8%, #f49700 91.4%, #f29800 91.4%, #f39900 93%, #f39b00 93%, #f39f00 95.1%, #f4a300 99.5%, #f2a400 99.5%, #f2a400);
-	height: 2px;
+	height: 1px;
+	border-top: 1px solid black;
 	display: block;
 	top: 0;
 	z-index: 10000;
@@ -284,25 +284,48 @@ header{
 
 header a:hover{color: #ccc}
 
+header .button-circle{background: rgba(0,0,0,.2); box-shadow: 0 1px 0 rgba(255,255,255,.1); float: left; padding: 4px; border-radius: 100px; width: 22px; height: 22px; margin-right: .8em}
+header .button-circle span, header .button-circle.lock span{ height: 22px; display: block; border-radius: 100px;
+	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
+	background-image: -moz-linear-gradient(#f1f1f1,  #ccc);
+	background-image: -o-linear-gradient(#f1f1f1,  #ccc);
+	box-shadow: 0 1px 1px rgba(0,0,0,.8);
+}
+
+header .button-circle span i{background:  url('../img/icon-invite.png') center no-repeat; width: 16px; margin: 2px 3px; float: left; height: 16px; display: block;}
+
+header .button-circle.lock.active span{ 
+	background-image: -webkit-linear-gradient(#fffbe6,  #ffee99);
+	background-image: -moz-linear-gradient(#f1f1f1,  #ccc);
+	background-image: -o-linear-gradient(#f1f1f1,  #ccc);
+}
+
+
+header .button-circle.lock span i{background:  url('../img/icon-unlocked.png') center no-repeat; }
+header .button-circle.lock.active span i{background:  url('../img/icon-locked.png') center no-repeat; }
+
 .dropdown {position: relative}
 .dropdown .selected{border: 1px solid #141617; padding: 6px 30px 6px 10px; display: block; text-transform: uppercase; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 1px 0 rgba(255,255,255,.1); border-radius: 4px}
-.dropdown .selected:hover{border: 1px solid rgba(255,255,255,.4);}
-.dropdown .selected.active{border: 1px solid rgba(255,255,255,.4); box-shadow: 0 0 4px rgba(255,255,255,.2)}
+.dropdown .selected:hover{border: 1px solid rgba(255,255,255,.6);}
+.dropdown .selected.active{border: 1px solid rgba(255,255,255,.6); box-shadow: 0 0 4px rgba(255,255,255,.2)}
 .dropdown .dropdown-options{
 	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
 	background-image: -moz-linear-gradient(#f1f1f1,  #ccc);
 	background-image: -o-linear-gradient(#f1f1f1,  #ccc);
 	border-radius: 4px; position: absolute; display: none;
-	top: 40px;
+	top: 36px;
 	box-shadow: 0 0px 2px black;
 }
-
+.dropdown .dropdown-options .list{
+	overflow: scroll;
+	max-height: 300px;
+}
 
 .dropdown .dropdown-options input{border-radius: 4px; border: 1px solid #ccc; margin: 4px; padding: 8px 8px; width: 154px}
 .dropdown .dropdown-options a.current{background: url('../img/icon-selected.png') right center no-repeat}
 .dropdown .dropdown-options a:hover{background-color: white;}
 
-.dropdown .dropdown-options a.option:nth-child(2){
+.dropdown .dropdown-options .list a.option:first-child, .dropdown .dropdown-options a.option.create-room{
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-top-right-radius: 4px;
 	-moz-border-radius-topleft: 4px;
@@ -320,19 +343,19 @@ header a:hover{color: #ccc}
 	border-bottom-left-radius: 4px;
 }
 
+.dropdown.dropdown-room {float: left; margin-right: 2.4em}
 .dropdown.dropdown-room .dropdown-options{width: 180px; }
 .dropdown.dropdown-room .dropdown-options a.current{background-position: 150px center}
 .dropdown.dropdown-status .dropdown-options a.current{background-position: 96px center}
 .dropdown.dropdown-status .dropdown-options{width: 120px; }
 
 .dropdown .dropdown-options .triangle{
-	position: absolute; top: -5px; left: 48%; display: block;
+	position: absolute; top: -4px; left: 48%; display: block;
 	width: 0;
 	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	border-bottom: 5px solid #f1f1f1;
-	
 }
 .dropdown .dropdown-options a{display: block;	color: #333; padding: 1em 1em; border-bottom: 1px solid #ccc; box-shadow: 0 1px 0 rgba(255,255,255,.4)}
 .dropdown .dropdown-options a:last-child{border-bottom: 0; box-shadow: none}
@@ -375,16 +398,17 @@ sidebar h4{text-transform: uppercase; color: #555; font-size: 1em; margin-top: 2
 
 sidebar a{color: white;}
 sidebar h4, sidebar div.online .people a{padding: 0 1em}
-sidebar div.online {height: 90%; }
+sidebar div.online {overflow: scroll; height: 100%}
 sidebar div.files {height: 18%;  display: none; }
-sidebar div.online .people, sidebar div.files .files-container{  overflow-y: scroll; height: 100%}
-sidebar div.online .people a{display: block; padding: .8em 1em;  border-bottom: 1px solid rgba(255,255,255,.04)}
-sidebar div.online a:hover{
+/*sidebar div.online .people, sidebar div.files .files-container{  overflow-y: scroll; height: 100%}*/
+sidebar div.online .people a{display: block; padding: 1em;  border-bottom: 1px solid rgba(255,255,255,.04)}
+sidebar div.online .people a:hover{
 	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
 	background-image: -moz-linear-gradient(#7e7e7e, #616161 8.6%, #3a3a3a);
 	background-image: -o-linear-gradient(#7e7e7e, #616161 8.6%, #3a3a3a);
 	color: black;
 	box-shadow: none;
+	border-color: transparent;
 }
 sidebar div.online{margin-bottom: 3em; }
 
@@ -410,17 +434,75 @@ sidebar .files  a.file i{background: url('../img/icons.png') no-repeat 0 -59px;}
 .content .chat .chat-box h5 .date{float: right; font-size: 0.8em; color: rgba(0,0,0,.6); font-weight: normal; font-style: italic;}
 .content .chat .chat-box .avatar{position: absolute; left: 1.4em; top: 1.4em; border-radius: 4px}
 .content .chat .chat-box p:last-child{margin-bottom: 0}
-.content .chat-input{ overflow: hidden; z-index: 10000; bottom: 0; position: absolute; right: 0; left: 0;
+.content .chat-input{ overflow: hidden; z-index: 500; bottom: 0; position: absolute; right: 0; left: 0;
 	border-top: 1px solid #ccc;
   background-image: -webkit-gradient(linear, 0 0, 0 45, color-stop(0.044, #fdfdfd), to(#dfe2e9));
   background-image: -webkit-linear-gradient(#eee 4.4%, #ccc);
   background-image: -moz-linear-gradient(#fdfdfd 4.4%, #dfe2e9);
   background-image: -o-linear-gradient(#fdfdfd 4.4%, #dfe2e9);	
 }
-.content .chat-input input.text{height: auto; max-height: 1.2em; padding: .6em; border: 1px solid #333; box-shadow: 0 1px 2px rgba(0,0,0,.6) inset; border-radius: 4px; width: 95%; padding: 1%; display: block; margin: 1% 1.5%}
+.content .chat-input input.text{height: auto; max-height: 1.2em;  border-radius: 4px; width: 95%; padding: 1%; display: block; margin: 1% 1.5%}
 
 
+.modal-invite{width: 500px}
+.modal-content{padding: .5em 16px; overflow: hidden;}
+.modal-content p {line-height: 2em}
+.tweet-user{float: left; margin-bottom: 1em}
+.tweet-user input{border: none; border-bottom: 1px dashed #333; opacity: .5; width: 189px; padding: 1em 0 1em 20px; margin-right: 50px; background: url('../img/icon-twitter.png') left center no-repeat}
+.tweet-user:nth-child(2n+1) input{margin-right: 0;}
+.tweet-user input:focus{opacity: 1; outline: none}
+.modal h2{
+	border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom: 1px solid #b4b8c2;
+  background-image: -webkit-linear-gradient(#fdfdfd 4.4%, #dfe2e9);
+  background-image: -moz-linear-gradient(#fdfdfd 4.4%, #dfe2e9);
+  background-image: -o-linear-gradient(#fdfdfd 4.4%, #dfe2e9);
+  font-weight: bold;
+  padding: 16px;
+	margin: 0;
+  color: #606878;
+  text-shadow: 0 1px 0 white;
+  text-align: center;
+  position: relative; 
+	font-size: 1.2em;
+}
+.modal-footer{padding: 2em; text-align: center; background: #eee; border-top: 1px solid #ccc; display: block; color: red}
 
+.fancybox-close{top: 16px; right: 16px; border: 1px solid #333; opacity: .3; background: url('../img/icon-close.png') center no-repeat; width: 20px; height: 20px; border-radius: 4px; }
+.fancybox-close:hover{opacity: .5}
+
+.button{
+	border: 1px solid #999;
+	color: #333;
+	display: inline-block;
+	box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	background-image: -webkit-linear-gradient(#f7f7f7 7.6%, #d5d5d5);
+	background-image: -moz-linear-gradient(#f7f7f7 7.6%, #d5d5d5);
+	background-image: -o-linear-gradient(#f7f7f7 7.6%, #d5d5d5);
+	font-weight: bold;
+	border-radius: 5px;
+	padding: 10px 20px;
+}
+
+.button:hover{
+	color: #000;
+	background-image: -webkit-linear-gradient(#f7f7f7 7.6%, #ccc);
+	background-image: -moz-linear-gradient(#f7f7f7 7.6%, #ccc);
+	background-image: -o-linear-gradient(#f7f7f7 7.6%, #ccc);
+}
+
+.button:active{
+	color: #000;
+	background-image: -webkit-linear-gradient(#ccc 7.6%, #f7f7f7);
+	background-image: -moz-linear-gradient(#ccc 7.6%, #f7f7f7);
+	background-image: -o-linear-gradient(#ccc 7.6%, #f7f7f7);
+}
 
 .fancy-theme .wrap{background: url('../img/wood.jpg');}
 .fancy-theme .chat-box{background-color: #e4eaec; text-shadow: 0 1px 0 white; position: relative; margin: 1.4em; border-radius: 4px;  border-radius: 4px; padding: 1em; padding-left: 6em}
