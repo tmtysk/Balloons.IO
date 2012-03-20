@@ -286,6 +286,7 @@ header a:hover{color: #ccc}
 
 .dropdown {position: relative}
 .dropdown .selected{border: 1px solid #141617; padding: 6px 30px 6px 10px; display: block; text-transform: uppercase; box-shadow: 0 1px 0 rgba(255,255,255,.1) inset, 0 1px 0 rgba(255,255,255,.1); border-radius: 4px}
+.dropdown .selected:hover{border: 1px solid rgba(255,255,255,.4);}
 .dropdown .selected.active{border: 1px solid rgba(255,255,255,.4); box-shadow: 0 0 4px rgba(255,255,255,.2)}
 .dropdown .dropdown-options{
 	background-image: -webkit-linear-gradient(#f1f1f1,  #ccc);
@@ -295,8 +296,11 @@ header a:hover{color: #ccc}
 	top: 40px;
 	box-shadow: 0 0px 2px black;
 }
+
+
+.dropdown .dropdown-options input{border-radius: 4px; border: 1px solid #ccc; margin: 4px; padding: 8px 8px; width: 154px}
 .dropdown .dropdown-options a.current{background: url('../img/icon-selected.png') right center no-repeat}
-.dropdown .dropdown-options a:hover{background-color: white}
+.dropdown .dropdown-options a:hover{background-color: white;}
 
 .dropdown .dropdown-options a.option:nth-child(2){
 	-webkit-border-top-left-radius: 4px;
