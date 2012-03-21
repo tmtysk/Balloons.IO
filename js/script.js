@@ -18,4 +18,8 @@ $(function() {
 	
 	$(".fancybox").fancybox({'margin': 0, 'padding': 0});
 	
+	$(".invite-people").click(function(){
+		$(this).hide().after('<p class="inviting-people">Inviting peple, please wait.</p>').delay(2000).hide().after('something');
+	});
+	
 });
