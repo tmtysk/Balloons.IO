@@ -527,8 +527,13 @@ sidebar .files  a.file i{background: url('../img/icons.png') no-repeat 0 -59px;}
 .fancy-theme .chat, .fancy-theme .line-chat{ box-shadow: 0 1px 1px rgba(0,0,0,.5)}
 .fancy-theme .line-chat{bottom: 4.8em; left: 1.2em; z-index: 50; right: 1.2em; background: white; position: absolute; height: 40px; }
 .fancy-theme .line-chat.second{bottom: 4.5em; z-index: 40; left: 1.4em; right: 1.4em}
-.fancy-theme .chat-input{background: url('../img/bg-purple.png'); border: 1px solid #000; box-shadow: 0 0 0 1px rgba(255,255,255,.1) inset,  0 0 10px 2px rgba(0,0,0,.65) inset ;
+.fancy-theme .chat-input{background: url('../img/bg-purple.png'); border: 1px solid #000; box-shadow: 0 0 0 1px rgba(255,255,255,.1) inset,  0 0 10px 2px rgba(0,0,0,.65) inset ;}
 
+
+body.home-page{background: url('../img/bg-site.png')}
+#login-box{background: white; border: 1px solid #ccc; text-align: center; width: 280px; margin: auto; padding: 2em  3em; margin-top: 10em; border-radius: 4px}
+#login-box .logo{height: 154px; margin: auto; display: block; margin-bottom: 2em; width: auto}
+#login-box p{line-height: 2em}
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
    This example overrides the primary ('mobile first') styles
