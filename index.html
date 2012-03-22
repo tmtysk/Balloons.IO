@@ -35,7 +35,18 @@
   
 	<div class="homepage-container">
 		<div class="slideshow">
-
+			<div id="slideshow">
+				<div class="slide">
+					<h2>Realtime & Free</h2>
+				</div>
+				<div class="slide">
+					<h2>Open or Private</h2>
+				</div>
+				<div class="slide">
+					<h2>Collaborative Chat</h2>
+				</div>
+				<div id="nav"></div>
+			</div><!-- #slideshow -->
 		</div>
 
 		<div class="login-box">
@@ -55,12 +66,19 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 	
-	<script src="js/libs/fancy-box/jquery.fancybox.pack.js"></script>
+	<script src="http://malsup.github.com/jquery.cycle.all.js"></script>
 	
-  <!-- scripts concatenated and minified via build script -->
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-  <!-- end scripts -->
+	<script type="text/javascript">
+	$(function() {
+	    $('#slideshow').cycle({
+	        fx:     'fade',
+	        speed:  'slow',
+	        timeout: 3000,
+	        pager:  '#nav',
+					slideExpr: 'div.slide'
+	    });
+	});
+	</script>
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->

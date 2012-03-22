@@ -530,14 +530,19 @@ sidebar .files  a.file i{background: url('../img/icons.png') no-repeat 0 -59px;}
 .fancy-theme .chat-input{background: url('../img/bg-purple.png'); border: 1px solid #000; box-shadow: 0 0 0 1px rgba(255,255,255,.1) inset,  0 0 10px 2px rgba(0,0,0,.65) inset ;}
 
 
-body.home-page{background: url('../img/bg-site.png'); margin-top: 10em; }
+body.home-page{background: #f1f1f1 url('../img/bg-site.png'); margin-top: 10em; }
 .homepage-container {width: 824px; overflow: hidden; margin: auto}
 .homepage-container .login-box{background: white; text-align: center; width: 300px; }
 .homepage-container .login-box .inner-padding{padding: 2em}
 .homepage-container .login-box .logo{height: 154px; margin: auto; display: block; margin-bottom: 2em; width: auto}
 .homepage-container .login-box p{line-height: 2em}
 .homepage-container .slideshow, .homepage-container .login-box{height: 350px;  border-radius: 4px; float: left; border: 1px solid #ccc; }
-.homepage-container .slideshow{background: white; width: 500px; margin-right: 20px; display: inline-block; float: left;}
+.homepage-container .slideshow{background: white; position: relative; width: 500px; margin-right: 20px; display: inline-block; float: left;}
+.homepage-container .slideshow .slide{background: white; text-align: center; border-radius: 4px; min-height: 350px; width: 500px}
+.homepage-container .slideshow #nav{bottom: 0;  width: auto; max-width: 100%; z-index: 10000; left: 0; right: 0; padding: 1em; text-align: center; position: absolute}
+.homepage-container .slideshow #nav a{background: #999; border-radius: 100px; text-indent: -1000em; display: inline-block; margin-right: 6px; width: 10px; height: 10px}
+.homepage-container .slideshow #nav a.activeSlide{background: #333}
+h2{font-weight: 100; color: #666}
 
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
