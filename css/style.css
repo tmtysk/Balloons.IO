@@ -530,10 +530,15 @@ sidebar .files  a.file i{background: url('../img/icons.png') no-repeat 0 -59px;}
 .fancy-theme .chat-input{background: url('../img/bg-purple.png'); border: 1px solid #000; box-shadow: 0 0 0 1px rgba(255,255,255,.1) inset,  0 0 10px 2px rgba(0,0,0,.65) inset ;}
 
 
-body.home-page{background: url('../img/bg-site.png')}
-#login-box{background: white; border: 1px solid #ccc; text-align: center; width: 280px; margin: auto; padding: 2em  3em; margin-top: 10em; border-radius: 4px}
-#login-box .logo{height: 154px; margin: auto; display: block; margin-bottom: 2em; width: auto}
-#login-box p{line-height: 2em}
+body.home-page{background: url('../img/bg-site.png'); margin-top: 10em; }
+.homepage-container {width: 824px; overflow: hidden; margin: auto}
+.homepage-container .login-box{background: white; text-align: center; width: 300px; }
+.homepage-container .login-box .inner-padding{padding: 2em}
+.homepage-container .login-box .logo{height: 154px; margin: auto; display: block; margin-bottom: 2em; width: auto}
+.homepage-container .login-box p{line-height: 2em}
+.homepage-container .slideshow, .homepage-container .login-box{height: 350px;  border-radius: 4px; float: left; border: 1px solid #ccc; }
+.homepage-container .slideshow{background: white; width: 500px; margin-right: 20px; display: inline-block; float: left;}
+
 /* ==|== media queries ======================================================
    EXAMPLE Media Query for Responsive Design.
    This example overrides the primary ('mobile first') styles
