@@ -1,14 +1,14 @@
 	$(document).ready(function(){
-		var socket = io.connect('http://localhost');
+		var socket = io.connect('http://yourapp_on_heroku.herokuapp.com');
 		socket.emit('set nickname',{room_id:$('#room_id').text(),'nickname':$('#username').text()});
 		
 		socket.on('new user',function(data){
-			$('.chat-list').append('<li><div class="status-bar"><span class="status available"></span></div><div class="user-space"><img src="http://img.tweetimag.es/i/'+data.nickname+'"+username class="avatar"><span class="username">'+data.nickname+'</span></div></li>');
+			$('.chat-list').append('<li><div class="status-bar"><span class="status available"></span></div><div class="user-space"><img src="https://si0.twimg.com/sticky/default_profile_images/default_profile_3_reasonably_small.png" class="avatar"><span class="username">'+data.nickname+'</span></div></li>');
 		});
 
 		socket.on('ready',function(data){
 			$.each(data.user_list,function(k,v){
-				$('.chat-list').append('<li><div class="status-bar"><span class="status available"></span></div><div class="user-space"><img src="http://img.tweetimag.es/i/"+v class="avatar"><span class="username">'+v+'</span></div></li>');
+				$('.chat-list').append('<li><div class="status-bar"><span class="status available"></span></div><div class="user-space"><img src="https://si0.twimg.com/sticky/default_profile_images/default_profile_3_reasonably_small.png" class="avatar"><span class="username">'+v+'</span></div></li>');
 			});
 		});
 
@@ -20,7 +20,7 @@
 				
 			} else{
 				var now = new Date();
-				$('.chats').append('<div class="chat-box"><div class="user"><img src="http://img.tweetimag.es/i/'+data.nickname+'" class="avatar"></div><div class="message-box"><span>'+now.getHours()+':'+((now.getMinutes() < 10) ? '0' : '') + now.getMinutes() +'</span><span class="username">'+data.nickname+' says:</span><div class="message-text">'+data.msg+'</div></div></div>');
+				$('.chats').append('<div class="chat-box"><div class="user"><img src="https://si0.twimg.com/sticky/default_profile_images/default_profile_3_reasonably_small.png" class="avatar"></div><div class="message-box"><span>'+now.getHours()+':'+((now.getMinutes() < 10) ? '0' : '') + now.getMinutes() +'</span><span class="username">'+data.nickname+' says:</span><div class="message-text">'+data.msg+'</div></div></div>');
 			}
 			$('.chats').scrollTop($('.chats').height());
 		});

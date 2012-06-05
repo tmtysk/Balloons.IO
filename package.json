@@ -1,13 +1,18 @@
 {
-    "name": "Balloons.io"
-  , "version": "0.0.1"
-  , "dependencies": {
-      "express": "2.5.1"
-    , "jade": ">= 0.0.1"
-    , "socket.io": "0.8.7"
-    , "easy-oauth": "0.2.1"
-    , "redis": ">= 0.7.1"
-    , "connect-redis": "1.2.0"
+  "name": "Balloons.io",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.6.x",
+    "npm":  "1.1.x"
+  },
+  "dependencies": {
+    "express": "2.5.1",
+    "jade": ">= 0.0.1",
+    "socket.io": "0.8.7",
+    "easy-oauth": "0.2.1",
+    "redis": ">= 0.7.1",
+    "redis-url": "0.1.0",
+    "connect-redis": "1.2.0"
   }
 }
 
